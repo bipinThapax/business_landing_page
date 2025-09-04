@@ -90,43 +90,39 @@ ul li .dropdown {
 }
 
 nav .logins button {
-  border: none;
   border-radius: 1.5rem;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 2rem;
   font-weight: 500;
-  cursor: pointer;
   margin-left: 1rem;
+  cursor: pointer;
   transition: all 0.45s ease;
 }
 
 .logins button:first-child {
-  background-color: transparent;
+  background-color: black;
   color: white;
-  border: 2px solid white;
+  border: 1px solid white;
 }
-.logins button:first-child:hover {
+.logins button:first-child:hover,
+.logins button:last-child:hover {
   background-color: #1b09ee;
-  border: 2px solid #1b09ee;
+  border: 1px solid #1b09ee;
 }
 .logins button:last-child {
   background-color: #33a1e0;
   color: white;
-  border: 2px solid #33a1e0;
-}
-.logins button:last-child:hover {
-  background-color: #1b09ee;
-  border: 2px solid #1b09ee;
+  border: 1px solid #33a1e0;
 }
 
 header {
   background: url(./background.jpg) no-repeat center/cover;
-  height: 95vh;
+  height: 90vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 header .intro {
-  height: 40vh;
+  height: 45vh;
   width: 30%;
   margin-left: 12rem;
 }
@@ -140,15 +136,16 @@ header .intro {
 }
 
 .intro p {
+  color: rgb(206, 199, 199);
   font-size: 1.8rem;
   font-weight: 300;
-  margin-bottom: 1rem;
+  margin: 2rem 0;
 }
 .intro button {
   border: none;
   border-radius: 0.5rem;
   padding: 0.8rem 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   margin-right: 1rem;
   transition: all 0.35s ease;
@@ -162,7 +159,61 @@ header .intro {
   opacity: 0.75;
 }
 
-.services {
+.features {
   background-color: black;
-  height: 30vh;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 5rem;
+  gap: 2rem;
+}
+.features h3:first-child {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 1px solid white;
+}
+
+.features .desc {
+  text-align: center;
+  width: 50%;
+}
+.desc h2 {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+.desc p {
+  color: grey;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+.feature-card {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 3rem;
+  padding: 2rem;
+}
+.feature-card .card {
+  height: 20vh;
+  min-width: 200px;
+  width: 15vw;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 1px 1px 5px rgb(78 78 78);
+}
+.feature-card .card h3 {
+  font-size: 1.6rem;
+}
+.feature-card .card p {
+  font-size: 1.4rem;
 }
