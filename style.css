@@ -36,6 +36,9 @@ nav {
   display: flex;
   align-items: center;
 }
+.menuBar {
+  display: none;
+}
 
 nav ul {
   display: flex;
@@ -135,7 +138,7 @@ header {
 header .intro {
   height: 45vh;
   max-width: 500px;
-  margin-left: 12rem;
+  padding-left: 12rem;
 }
 .intro h1 {
   font-size: 5rem;
@@ -188,11 +191,10 @@ header .intro {
 
 .features .desc {
   text-align: center;
-  width: 50%;
+  width: 60%;
 }
 .desc h2 {
   font-size: 4rem;
-  line-height: 4rem;
 }
 
 .desc p {
@@ -205,13 +207,12 @@ header .intro {
 .feature-card {
   width: 80%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 2rem;
   padding: 2rem;
 }
 /* cards */
 .feature-card .card {
-  height: 20vh;
   padding: 1.5rem;
   border-radius: 1rem;
   display: flex;
@@ -252,14 +253,10 @@ header .intro {
   text-align: justify;
 }
 /* about-image */
-.about .about-img {
-  min-width: 250px;
-  width: 20%;
-  height: 200px;
-  border: 2px solid white;
+.about-img img {
   border-radius: 1rem;
+  border: 2px solid white;
 }
-
 /* footer styles */
 footer {
   background-color: #010128;
@@ -313,10 +310,61 @@ footer .copyright {
 
 /* responsiveness */
 @media (max-width: 850px) {
+  .about {
+    padding: 1rem;
+  }
   .about .about-desc {
-    min-width: 85%;
+    width: 95%;
+    text-align: center;
   }
   .footer-info {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo-img {
+    display: none;
+  }
+  .menuBar {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+  header .intro {
+    padding: 1rem 3rem;
+  }
+  .features .desc {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  header .intro h1 {
+    font-size: 3rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.2rem;
+  }
+  .features {
+    padding: 1rem;
+  }
+
+  .feature-card {
+    width: 100%;
+  }
+  .desc h2 {
+    font-size: 2rem;
+  }
+  footer .footer-col-right ul {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .about .about-img img {
+    width: 200px;
   }
 }
